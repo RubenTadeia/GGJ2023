@@ -12,7 +12,6 @@ public class DragAndDrop : MonoBehaviour
 	private float objectWidth;
 	private float objectHeight;
 
-
 	void Start()
 	{
 		collider = GetComponent<Collider2D>();
