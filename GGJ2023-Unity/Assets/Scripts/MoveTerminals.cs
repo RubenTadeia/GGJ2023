@@ -11,14 +11,20 @@ public class MoveTerminals : MonoBehaviour
 
     void Start()
     {
-        float angle = Random.Range(0.0f, 360.0f);
+        float angle = 360.0f;//Random.Range(0.0f, 360.0f);
+
+        direction = CalcDirection(angle);
+    }
+
+    Vector3 CalcDirection(float angle)
+    {
         float x = Mathf.Sin(angle) * initDistance;
         float y = 0;
         float z = Mathf.Cos(angle) * initDistance;
 
         transform.position = dendrites.position + new Vector3(x, y, z);
 
-        direction = (transform.position - dendrites.position).normalized;
+        return (transform.position - dendrites.position).normalized;
     }
 
     void Update()
@@ -34,4 +40,19 @@ public class MoveTerminals : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Check if the circular object has collided with another object
+        if (collision.CompareTag("Comida"))
+        {
+            Debug.Log("Collision Comida");
+            // Calculate the angle of collision
+            //Vector2 collisionNormal = collision.GetContact(0).normal;
+            float angle = 50.0f;//Mathf.Atan2(collisionNormal.y, collisionNormal.x) * Mathf.Rad2Deg;
+
+            direction = CalcDirection(angle);
+        }
+    }
+
 }
