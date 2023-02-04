@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Comida
+  - Fundo
   layers:
   - Default
   - TransparentFX

@@ -6,15 +6,19 @@ public class DragAndDrop : MonoBehaviour
 {
 	bool canMove;
 	bool dragging;
-	Collider2D collider;
+	Collider2D colliderVar;
 
 	private Camera mainCamera;
 	private float objectWidth;
 	private float objectHeight;
 
+	private Vector2 startPos;
+
+	public bool colliding = false;
+
 	void Start()
 	{
-		collider = GetComponent<Collider2D>();
+		colliderVar = GetComponent<Collider2D>();
 		canMove = false;
 		dragging = false;
 
@@ -22,6 +26,8 @@ public class DragAndDrop : MonoBehaviour
 		SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
 		objectWidth = spriteRenderer.bounds.size.x / 2;
 		objectHeight = spriteRenderer.bounds.size.y / 2;
+
+		startPos = transform.position;
 	}
 
 	// Update is called once per frame
@@ -31,7 +37,7 @@ public class DragAndDrop : MonoBehaviour
 
 		if (Input.GetMouseButtonDown(0))
 		{
-			if (collider == Physics2D.OverlapPoint(mousePos))
+			if (colliderVar == Physics2D.OverlapPoint(mousePos))
 			{
 				canMove = true;
 			}
@@ -46,7 +52,8 @@ public class DragAndDrop : MonoBehaviour
 		}
 		if (dragging)
 		{
-			this.transform.position = mousePos;
+			startPos = transform.position;
+			transform.position = mousePos;
 		}
 		if (Input.GetMouseButtonUp(0))
 		{
@@ -66,5 +73,10 @@ public class DragAndDrop : MonoBehaviour
 		clampedPosition.x = Mathf.Clamp(clampedPosition.x, mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + objectWidth, mainCamera.ViewportToWorldPoint(new Vector3(1, 1, 0)).x - objectWidth);
 		clampedPosition.y = Mathf.Clamp(clampedPosition.y, mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + objectHeight, mainCamera.ViewportToWorldPoint(new Vector3(1, 1, 0)).y - objectHeight);
 		transform.position = clampedPosition;
+	}
+
+	private void OnCollisionEnter2D(Collision2D other) {
+		dragging = false;
+		transform.position = startPos;
 	}
 }
