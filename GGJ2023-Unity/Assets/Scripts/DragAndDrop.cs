@@ -43,8 +43,6 @@ public class DragAndDrop : MonoBehaviour
 			{
 				dragging = true;
 			}
-		   
-
 		}
 		if (dragging)
 		{
