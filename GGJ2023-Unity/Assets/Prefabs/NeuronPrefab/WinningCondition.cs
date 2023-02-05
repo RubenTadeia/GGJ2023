@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WinningCondition : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class WinningCondition : MonoBehaviour
     {
         if (!win & inputConnected && outputConnected) {
             Debug.Log("You Win!");
+            SwitchPlay.play = false;
             win = true;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
