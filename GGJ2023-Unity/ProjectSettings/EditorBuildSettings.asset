@@ -11,10 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: c9dcc02a3cf0e694d9dc6919e7dae566
-  - enabled: 0
-    path: Assets/Scenes/Level-1.unity
-    guid: fbe1c61d6b65f5d4593c56d369c53a9c
   - enabled: 1
-    path: Assets/Scenes/Level-1-Com-Musica-Ruben.unity
-    guid: 766011051fae3424d8c7a22a38b15646
+    path: Assets/Scenes/Level-1-Com-Butoes.unity
+    guid: c68e548ce7696c54699f823cd2feb237
   m_configObjects: {}
