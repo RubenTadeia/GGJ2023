@@ -6,7 +6,11 @@ TagManager:
   tags:
   - Wall
   - Comida
+<<<<<<< Updated upstream
   - Fundo
+=======
+  - Axon
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
