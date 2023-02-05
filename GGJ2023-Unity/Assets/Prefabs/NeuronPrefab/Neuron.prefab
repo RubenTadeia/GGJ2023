@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axonPrefab: {fileID: 940861852618429164, guid: 7a47f76010e8bc94eb2b7687ae81d5c9, type: 3}
+  dendritesGrowth: 7
+  terminalsGrowth: 10
 --- !u!114 &-3423207797776703553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,13 +194,63 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4971561581086280800, guid: 0ef957c22d5921843ab700cae3d5febd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971561581086280800, guid: 0ef957c22d5921843ab700cae3d5febd, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4971561581086280807, guid: 0ef957c22d5921843ab700cae3d5febd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.6948943
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971561581086280807, guid: 0ef957c22d5921843ab700cae3d5febd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.135245
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971561581086280807, guid: 0ef957c22d5921843ab700cae3d5febd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7430571
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4971561581086280800, guid: 0ef957c22d5921843ab700cae3d5febd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0ef957c22d5921843ab700cae3d5febd, type: 3}
 --- !u!4 &2390249032431870039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4971561579516959935, guid: 0ef957c22d5921843ab700cae3d5febd, type: 3}
   m_PrefabInstance: {fileID: 7337865992976219368}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2390249032911204494 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4971561581086280806, guid: 0ef957c22d5921843ab700cae3d5febd, type: 3}
+  m_PrefabInstance: {fileID: 7337865992976219368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8923980218048386946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390249032911204494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc11f57366c660e4da75c59c50eb2ecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &8960571625050681382
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390249032911204494}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 1
