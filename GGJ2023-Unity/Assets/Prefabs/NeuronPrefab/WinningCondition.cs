@@ -9,9 +9,9 @@ public class WinningCondition : MonoBehaviour
 
     void Update()
     {
-        if (inputConnected && outputConnected) {
-            win = true;
+        if (!win & inputConnected && outputConnected) {
             Debug.Log("You Win!");
+            win = true;
         }
     }
 }
