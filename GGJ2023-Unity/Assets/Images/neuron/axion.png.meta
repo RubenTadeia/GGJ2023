@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: b4be176d7a772f6409eca8abe7a4ac79
-=======
-guid: e843df3a28fb12e4e852022b42d43bb3
->>>>>>> Stashed changes
+guid: 7e901696e84d4634b8149a668553d9f2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -40,15 +36,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-<<<<<<< Updated upstream
     wrapU: 1
     wrapV: 1
     wrapW: 1
-=======
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
->>>>>>> Stashed changes
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -86,33 +76,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< Updated upstream
-=======
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites: []

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2390249033603214287}
   - component: {fileID: 2390249033603214280}
+  - component: {fileID: -3423207797776703553}
+  - component: {fileID: -1626328028944583229}
   m_Layer: 0
   m_Name: Neuron
   m_TagString: Untagged
@@ -47,6 +49,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axonPrefab: {fileID: 940861852618429164, guid: 7a47f76010e8bc94eb2b7687ae81d5c9, type: 3}
+--- !u!114 &-3423207797776703553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390249033603214286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6c087e98d1beb47a6693b8c4c313b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1626328028944583229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390249033603214286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf34a11167391542b4d58d2c1dfc7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliding: 0
 --- !u!1001 &6495469170518761111
 PrefabInstance:
   m_ObjectHideFlags: 0
