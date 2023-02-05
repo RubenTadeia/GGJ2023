@@ -1,20 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-	public string sceneName;
-	public int secondsToWait;
+	public float delay = 5.0f;
 
-	IEnumerator FunctionWait()
-    {
-        yield return new WaitForSeconds(secondsToWait);
-    }
-
-	public void ChangeToScene()
+	private void Start()
 	{
-		FunctionWait();
-		UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+		Invoke("LoadNextScene", delay);
+	}
+
+	private void LoadNextScene()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 }
