@@ -6,14 +6,14 @@ public class WinningCondition : MonoBehaviour
 {
     public static bool inputConnected = false;
     public static bool outputConnected = false;
-    public static bool win = false;
 
     void Update()
     {
-        if (!win & inputConnected && outputConnected) {
+        if (inputConnected && outputConnected) {
             Debug.Log("You Win!");
             SwitchPlay.play = false;
-            win = true;
+            inputConnected = false;
+            outputConnected = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
