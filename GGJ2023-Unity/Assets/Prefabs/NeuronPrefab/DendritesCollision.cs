@@ -21,6 +21,8 @@ public class DendritesCollision : MonoBehaviour
             Debug.Log("Collided with " + collision.gameObject.tag);
 
             SendMessageUpwards("HandleStopGrowth", transform.parent.name);
+
+            SendMessageUpwards("HandleConnection", collision.gameObject.tag);
         }
 }
 }
