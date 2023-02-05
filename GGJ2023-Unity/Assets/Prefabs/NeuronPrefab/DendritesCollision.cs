@@ -16,7 +16,9 @@ public class DendritesCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Input") || collision.CompareTag("Output"))
+        bool isPlaying = SwitchPlay.play;
+
+        if (isPlaying && (collision.CompareTag("Input") || collision.CompareTag("Output")))
         {
             Debug.Log("Collided with " + collision.gameObject.tag);
 
