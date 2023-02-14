@@ -801,7 +801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &530729735
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2653,7 +2653,7 @@ AudioSource:
   m_GameObject: {fileID: 1619271390}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: e60f060c802943a44919e346a3520c94, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3809d4ef4efca4c4ca30697f8a2fc7ae, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2917,7 +2917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1736941415
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3039,16 +3039,16 @@ MonoBehaviour:
   m_FillRect: {fileID: 1913462751}
   m_HandleRect: {fileID: 952152491}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786885700}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
-        m_MethodName: SetValueWithoutNotify
+      - m_Target: {fileID: 1786885701}
+        m_TargetAssemblyTypeName: VolumeController, Assembly-CSharp
+        m_MethodName: SetLevel
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3070,8 +3070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e010ba843e25d2249b734717a8e134e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 1786885700}
-  audioSource: {fileID: 0}
+  mixer: {fileID: 24100000, guid: e60f060c802943a44919e346a3520c94, type: 2}
 --- !u!1 &1813401769
 GameObject:
   m_ObjectHideFlags: 0
