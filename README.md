@@ -6,6 +6,7 @@ https://rubentadeia.github.io/GGJ2023/
 
 # CONTROLS
 **LEFT MOUSE** - Click and Drag -> Food and Dendrites
+
 **MOUSE WHEEL** - Rotate -> Dendrites
 
 ---
