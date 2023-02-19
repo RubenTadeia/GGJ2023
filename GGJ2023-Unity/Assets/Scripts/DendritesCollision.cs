@@ -18,7 +18,8 @@ public class DendritesCollision : MonoBehaviour
     {
         bool isPlaying = SwitchPlay.play;
 
-        if (isPlaying && (collision.CompareTag("Input") || collision.CompareTag("Output")))
+        //if (isPlaying && (collision.CompareTag("Input") || collision.CompareTag("Output")))
+        if ((collision.CompareTag("Input") || collision.CompareTag("Output")))
         {
             Debug.Log("Collided with " + collision.gameObject.tag);
 

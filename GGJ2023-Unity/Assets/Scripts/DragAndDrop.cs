@@ -27,7 +27,7 @@ public class DragAndDrop : MonoBehaviour
 		objectWidth = spriteRenderer.bounds.size.x / 2;
 		objectHeight = spriteRenderer.bounds.size.y / 2;
 
-		startPos = transform.position;
+		//startPos = transform.position;
 	}
 
 	// Update is called once per frame
@@ -52,7 +52,7 @@ public class DragAndDrop : MonoBehaviour
 		}
 		if (dragging)
 		{
-			startPos = transform.position;
+			//startPos = transform.position;
 			transform.position = mousePos;
 		}
 		if (Input.GetMouseButtonUp(0))
@@ -75,8 +75,8 @@ public class DragAndDrop : MonoBehaviour
 		transform.position = clampedPosition;
 	}
 
-	private void OnCollisionEnter2D(Collision2D other) {
-		dragging = false;
-		transform.position = startPos;
-	}
+	//private void OnCollisionEnter2D(Collision2D other) {
+	//	dragging = false;
+	//	transform.position = startPos;
+	//}
 }
